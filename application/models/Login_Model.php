@@ -19,6 +19,11 @@ class Login_Model extends CI_Model
     public function get_data_where($x, $y)
     {
         return $this->db->where($x, $y)->get('admin')->result_array();
+	}
+	
+	public function get_data_num_rows($x, $y)
+    {
+        return $this->db->where($x, $y)->get('admin')->num_rows();
     }
     
     public function get_data_where_row($x, $y)

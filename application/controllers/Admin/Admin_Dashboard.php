@@ -15,7 +15,6 @@ class Admin_Dashboard extends CI_Controller
     
     public function index()
     {
-        $data           = active('dashboard');
         $data['judul']  = "Dashboard";
         $data['asset2'] = base_url() . "asset2/";
         $this->load->view('admin/template/Header', $data);

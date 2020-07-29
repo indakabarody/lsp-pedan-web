@@ -21,7 +21,7 @@
 			<div class="card-body">
 				<form class="form-horizontal style-form" method="POST" action="" name="form1" id="form1" enctype="multipart/form-data">
 					<div class= "form-group">
-						<input type="hidden" name="id_profil" value="<?= $data['id_profil'] ?? ''; ?>">
+						<input type="hidden" name="id_visi_misi" value="<?= $data['id_visi_misi'] ?? '';  ?>">
 						<script src="<?= $asset2; ?>ckeditor/ckeditor.js"></script>
 						<label class="control-label">Text</label>
 						<textarea class="form-control ckeditor" name="text"><?= $data['text'] ?? ''; ?></textarea>

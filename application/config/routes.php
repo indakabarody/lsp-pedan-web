@@ -10,6 +10,8 @@ $route['admin/dashboard'] = 'admin/Admin_Dashboard';
 
 $route['admin/profil'] = 'admin/Admin_Profil';
 
+$route['admin/visi-misi'] = 'admin/Admin_Visi_Misi';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

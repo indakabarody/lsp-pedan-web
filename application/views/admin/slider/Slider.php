@@ -34,7 +34,7 @@
 							<td style="width: 5px;"><?= $no++; ?></td>
 							<td><img src="<?= $asset2; ?>upload/slider/<?= $row['slider']; ?>" alt="" width="150"></td>
 							<td>
-								<a href="<?= base_url(); ?>admin/slider/edit/<?= $row['id_slider']; ?>" class="text-primary"><i class="fa fa-edit"></i> Edit</a> | 
+								<a href="<?= base_url(); ?>admin/slider/edit/<?= $row['id_slider']; ?>" class="text-success"><i class="fa fa-edit"></i> Edit</a> | 
 								<?php if ($row['enabled'] == 1) { ?>
 								<a href="<?= base_url(); ?>admin/slider/disable/<?= $row['id_slider']; ?>" class="text-warning"><i class="fa fa-power-off"></i> Nonaktifkan</a> | 
 								<?php } else { ?>

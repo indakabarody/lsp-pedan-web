@@ -34,7 +34,7 @@ class Admin_Visi_Misi extends CI_Controller
         $data['asset2'] = base_url() . "asset2/";
         $data['data']   = $this->Visi_Misi_Model->get_data_row();
         $this->load->view('admin/template/Header', $data);
-        $this->load->view('admin/tentang/Visi_Misi');
+        $this->load->view('admin/Visi_Misi');
         $this->load->view('admin/template/Footer');
     }
 }

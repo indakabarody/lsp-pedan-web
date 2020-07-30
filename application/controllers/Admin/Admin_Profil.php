@@ -34,7 +34,7 @@ class Admin_Profil extends CI_Controller
         $data['asset2'] = base_url() . "asset2/";
         $data['data']   = $this->Profil_Model->get_data_row();
         $this->load->view('admin/template/Header', $data);
-        $this->load->view('admin/tentang/Profil');
+        $this->load->view('admin/Profil');
         $this->load->view('admin/template/Footer');
     }
 }

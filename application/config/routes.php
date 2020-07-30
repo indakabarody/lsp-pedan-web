@@ -8,9 +8,27 @@ $route['logout'] = 'admin/Auth/logout';
 
 $route['admin/dashboard'] = 'admin/Admin_Dashboard';
 
+$route['admin/slider'] = 'admin/Admin_Slider';
+$route['admin/slider/tambah'] = 'admin/Admin_Slider/tambah';
+$route['admin/slider/edit'] = 'admin/Admin_Slider/edit';
+$route['admin/slider/edit/(:any)'] = 'admin/Admin_Slider/edit/$1';
+$route['admin/slider/enable'] = 'admin/Admin_Slider/enable';
+$route['admin/slider/enable/(:any)'] = 'admin/Admin_Slider/enable/$1';
+$route['admin/slider/disable'] = 'admin/Admin_Slider/disable';
+$route['admin/slider/disable/(:any)'] = 'admin/Admin_Slider/disable/$1';
+$route['admin/slider/hapus'] = 'admin/Admin_Slider/hapus';
+$route['admin/slider/hapus/(:any)'] = 'admin/Admin_Slider/hapus/$1';
+
 $route['admin/profil'] = 'admin/Admin_Profil';
 
 $route['admin/visi-misi'] = 'admin/Admin_Visi_Misi';
+
+$route['admin/struktur-organisasi'] = 'admin/Admin_Struktur_Organisasi';
+$route['admin/struktur-organisasi/tambah'] = 'admin/Admin_Struktur_Organisasi/tambah';
+$route['admin/struktur-organisasi/edit'] = 'admin/Admin_Struktur_Organisasi/edit';
+$route['admin/struktur-organisasi/edit/(:any)'] = 'admin/Admin_Struktur_Organisasi/edit/$1';
+$route['admin/struktur-organisasi/hapus'] = 'admin/Admin_Struktur_Organisasi/hapus';
+$route['admin/struktur-organisasi/hapus/(:any)'] = 'admin/Admin_Struktur_Organisasi/hapus/$1';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

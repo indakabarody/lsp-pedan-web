@@ -32,6 +32,16 @@
 				"autoWidth": false,
 	   });
 	});
+
+	$('.del').click(function () {
+		var id = $(this).data('id');
+		$(".delete").data("id", id);
+	});
+	$('.delete').click(function () {
+		var id = $(this).data('id');
+		var table = $(this).data('table');
+		window.location.href = '<?php base_url()."admin/"; ?>' + table + '/hapus/' + id;
+	});
 	
 </script>
 </body>

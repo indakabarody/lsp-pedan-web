@@ -30,6 +30,13 @@ $route['admin/struktur-organisasi/edit/(:any)'] = 'admin/Admin_Struktur_Organisa
 $route['admin/struktur-organisasi/hapus'] = 'admin/Admin_Struktur_Organisasi/hapus';
 $route['admin/struktur-organisasi/hapus/(:any)'] = 'admin/Admin_Struktur_Organisasi/hapus/$1';
 
+$route['admin/skema-sertifikasi'] = 'admin/Admin_Skema_Sertifikasi';
+$route['admin/skema-sertifikasi/tambah'] = 'admin/Admin_Skema_Sertifikasi/tambah';
+$route['admin/skema-sertifikasi/edit'] = 'admin/Admin_Skema_Sertifikasi/edit';
+$route['admin/skema-sertifikasi/edit/(:any)'] = 'admin/Admin_Skema_Sertifikasi/edit/$1';
+$route['admin/skema-sertifikasi/hapus'] = 'admin/Admin_Skema_Sertifikasi/hapus';
+$route['admin/skema-sertifikasi/hapus/(:any)'] = 'admin/Admin_Skema_Sertifikasi/hapus/$1';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

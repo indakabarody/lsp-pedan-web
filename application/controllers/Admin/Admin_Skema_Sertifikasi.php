@@ -6,7 +6,8 @@ class Admin_Skema_Sertifikasi extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Skema_Sertifikasi_Model');
+		$this->load->model('Skema_Sertifikasi_Model');
+		$this->load->model('Kompetensi_Model');
         $this->load->model('Login_Model');
         if (!$this->Login_Model->isLogin()) {
             return redirect(base_url() . "admin/login");
@@ -15,8 +16,8 @@ class Admin_Skema_Sertifikasi extends CI_Controller
     
     public function index()
     {
-        $data['nama']              = 'Skema Sertifikasi';
-        $data['skema_sertifikasi'] = $this->Skema_Sertifikasi_Model->get_data();
+        $data['judul']              = 'Skema Sertifikasi';
+        $data['skema_sertifikasi'] = $this->Skema_Sertifikasi_Model->get_data_with_kompetensi_all();
         $data['asset2']            = base_url() . "asset2/";
         $this->load->view('admin/template/Header', $data);
         $this->load->view('admin/skema_sertifikasi/Skema_Sertifikasi');
@@ -49,7 +50,8 @@ class Admin_Skema_Sertifikasi extends CI_Controller
             redirect(base_url() . "admin/skema-sertifikasi");
         }
         
-        $data['nama']   = "Tambah Skema Sertifikasi";
+		$data['judul']   = "Tambah Skema Sertifikasi";
+		$data['kompetensi'] = $this->Kompetensi_Model->get_data();
         $data['asset2'] = base_url() . "asset2/";
         $this->load->view('admin/template/Header', $data);
         $this->load->view('admin/skema_sertifikasi/Skema_Sertifikasi-Tambah');
@@ -84,9 +86,10 @@ class Admin_Skema_Sertifikasi extends CI_Controller
                 redirect(base_url() . "admin/skema-sertifikasi");
             }
             
-            $data['nama']   = "Edit Skema Sertifikasi";
+            $data['judul']   = "Edit Skema Sertifikasi";
             $data['asset2'] = base_url() . "asset2/";
-            $data['data']   = $this->Skema_Sertifikasi_Model->get_data_where('id_skema_sertifikasi', $id);
+			$data['data']   = $this->Skema_Sertifikasi_Model->get_data_where('id_skema_sertifikasi', $id);
+			$data['kompetensi'] = $this->Kompetensi_Model->get_data();
             $this->load->view('admin/template/Header', $data);
             $this->load->view('admin/skema_sertifikasi/Skema_Sertifikasi-Edit');
             $this->load->view('admin/template/Footer');

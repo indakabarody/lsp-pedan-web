@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Skema_Sertifikasi extends CI_Model
+class Skema_Sertifikasi_Model extends CI_Model
 {
     public function get_data()
     {
@@ -23,11 +23,12 @@ class Skema_Sertifikasi extends CI_Model
         return $this->db->order_by($x, $y)->get('skema_sertifikasi')->result_array();
 	}
 	
-    public function get_data_with_kompetensi_all($x, $y, $z)
+    public function get_data_with_kompetensi_all()
     {
-        $this->db->join('kompetensi', 'skema_sertifikasi.id_kompetensi = kompetensi.id_kompetensi');
-		$this->db->select('skema_sertifikasi.*', 'kompetensi.*');
-		$this->db->order_by('skema_sertifikasi.nama', 'asc');
+		$this->db->select('skema_sertifikasi.*, kompetensi.kompetensi, kompetensi.kompetensi_short')
+					->from('skema_sertifikasi')
+					->join('kompetensi', 'kompetensi.id_kompetensi = skema_sertifikasi.id_kompetensi')
+					->order_by('skema_sertifikasi.nama', 'asc');
         return $this->db->get()->result_array();
 	}
 

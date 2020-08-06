@@ -37,6 +37,14 @@ $route['admin/skema-sertifikasi/edit/(:any)'] = 'admin/Admin_Skema_Sertifikasi/e
 $route['admin/skema-sertifikasi/hapus'] = 'admin/Admin_Skema_Sertifikasi/hapus';
 $route['admin/skema-sertifikasi/hapus/(:any)'] = 'admin/Admin_Skema_Sertifikasi/hapus/$1';
 
+$route['admin/unit-kompetensi'] = 'admin/Admin_Unit_Kompetensi';
+$route['admin/unit-kompetensi/(:any)'] = 'admin/Admin_Unit_Kompetensi/tampil/$1';
+$route['admin/unit-kompetensi/(:any)/tambah'] = 'admin/Admin_Unit_Kompetensi/tambah/$1';
+$route['admin/unit-kompetensi/(:any)/edit'] = 'admin/Admin_Unit_Kompetensi/edit';
+$route['admin/unit-kompetensi/(:any)/edit/(:any)'] = 'admin/Admin_Unit_Kompetensi/edit/$1/$2';
+$route['admin/unit-kompetensi/(:any)/hapus'] = 'admin/Admin_Unit_Kompetensi/hapus';
+$route['admin/unit-kompetensi/hapus/(:any)'] = 'admin/Admin_Unit_Kompetensi/hapus/$1';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

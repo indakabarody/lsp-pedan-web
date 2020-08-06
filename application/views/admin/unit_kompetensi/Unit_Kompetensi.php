@@ -16,38 +16,36 @@
 		<!-- Default box -->
 		<div class="card">
 			<div class="card-header">
-				<h3 class="card-title"><a href="<?= base_url()."admin/skema-sertifikasi/tambah"; ?>" class="btn btn-primary btn-block text-white">Tambah</a></h3>
+				<h3 class="card-title"><a href="<?= base_url()."admin/unit-kompetensi/$id_skema_sertifikasi/tambah"; ?>" class="btn btn-primary btn-block text-white">Tambah</a></h3>
 			</div>
 			<div class="card-body">
 				<table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Nama Skema</th>
-							<th>Kompetensi</th>
-							<th>Gambar</th>
+							<th>Kode Unit</th>
+							<th>Judul Unit Kompetensi</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php $no = 1; ?>
-						<?php foreach ($skema_sertifikasi as $row) : ?>
+						<?php foreach ($unit_kompetensi as $row) : ?>
 						<tr>
 							<td style="width: 5px;"><?= $no++; ?></td>
-							<td><?= $row['nama']; ?></td>
-							<td><?= $row['kompetensi_short']; ?></td>
-							<td><img src="<?= $asset2; ?>upload/skema_sertifikasi/<?= $row['gambar']; ?>" alt="" width="100"></td>
+							<td><?= $row['kode_unit']; ?></td>
+							<td><?= $row['judul']; ?></td>
 							<td>
-								<a href="<?= base_url(); ?>admin/skema-sertifikasi/edit/<?= $row['id_skema_sertifikasi']; ?>" class="text-success"><i class="fa fa-edit"></i> Edit</a> |
-								<a href="<?= base_url(); ?>admin/unit-kompetensi/<?= $row['id_skema_sertifikasi']; ?>" class="text-primary"><i class="fa fa-edit"></i> Kelola Unit Kompetensi</a> |  
-								<a href="#" class="text-danger del" data-toggle="modal" data-target="#modal-delete" data-id="<?= $row['id_skema_sertifikasi']; ?>"><i class="fa fa-trash"></i> Hapus</a>
+								<a href="<?= base_url(); ?>admin/unit-kompetensi/<?= $id_skema_sertifikasi; ?>/edit/<?= $row['id_unit_kompetensi']; ?>" class="text-success"><i class="fa fa-edit"></i> Edit</a> | 
+								<a href="#" class="text-danger del" data-toggle="modal" data-target="#modal-delete-<?= $row['id_unit_kompetensi'] ?>"><i class="fa fa-trash"></i> Hapus</a>
 							</td>
 						</tr>
 						<?php endforeach ?>
 					</tbody>
 				</table>
 
-				<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+				<?php foreach ($unit_kompetensi as $row) : ?>
+				<div class="modal fade" id="modal-delete-<?= $row['id_unit_kompetensi'] ?>" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -57,11 +55,11 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<p>Yakin ingin menghapus? Semua data yang berhubungan dengan skema ini juga akan ikut terhapus.</p>
+								<p>Yakin ingin menghapus?</p>
 							</div>
 							<div class="modal-footer justify-content-between">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-								<button type="button" class="btn btn-danger delete" data-table="skema-sertifikasi">Ya</button>
+								<a href="<?= base_url()."admin/unit-kompetensi/hapus/".$row['id_unit_kompetensi']; ?>" class="btn btn-danger delete">Ya</a>
 							</div>
 						</div>
 						<!-- /.modal-content -->
@@ -69,6 +67,7 @@
 					<!-- /.modal-dialog -->
 				</div>
 				<!-- /.modal -->
+				<?php endforeach ?>
 
 			</div>
 			<!-- /.card-body -->

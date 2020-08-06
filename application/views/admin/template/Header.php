@@ -129,12 +129,6 @@
 									</a>
 								</li>
 								<li class="nav-item">
-									<a href="<?= base_url()."admin/unit-kompetensi"; ?>" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Unit Kompetensi</p>
-									</a>
-								</li>
-								<li class="nav-item">
 									<a href="<?= base_url()."admin/asesor-kompetensi"; ?>" class="nav-link">
 										<i class="far fa-circle nav-icon"></i>
 										<p>Asesor Kompetensi</p>

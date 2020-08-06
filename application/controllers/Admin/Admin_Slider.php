@@ -81,7 +81,7 @@ class Admin_Slider extends CI_Controller
         if ((!$id == NUll) && ($this->Slider_Model->get_data_where("id_slider", $id))) {
             $data['enabled'] = 1;
             $this->Slider_Model->update_data($id, $data);
-            redirect(base_url() . "admin/slider");
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
             redirect(base_url() . "admin");
         }
@@ -92,7 +92,7 @@ class Admin_Slider extends CI_Controller
         if ((!$id == NUll) && ($this->Slider_Model->get_data_where("id_slider", $id))) {
             $data['enabled'] = 0;
             $this->Slider_Model->update_data($id, $data);
-            redirect(base_url() . "admin/slider");
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
             redirect(base_url() . "admin");
         }
@@ -106,7 +106,7 @@ class Admin_Slider extends CI_Controller
                 $this->_deleteImage($row['slider'], "slider");
             }
             $this->Slider_Model->delete_data("id_slider", $id);
-            redirect(base_url() . "admin/slider");
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
             redirect(base_url() . "admin");
         }

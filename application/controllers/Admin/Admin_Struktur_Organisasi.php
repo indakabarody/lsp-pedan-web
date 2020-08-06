@@ -67,7 +67,7 @@ class Admin_Struktur_Organisasi extends CI_Controller
     {
         if ((!$id == NUll) && ($this->Struktur_Organisasi_Model->get_data_where("id_struktur_organisasi", $id))) {
             $this->Struktur_Organisasi_Model->delete_data("id_struktur_organisasi", $id);
-            redirect(base_url() . "admin/struktur-organisasi");
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
             redirect(base_url() . "admin");
         }

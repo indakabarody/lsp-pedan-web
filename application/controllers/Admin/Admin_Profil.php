@@ -23,11 +23,11 @@ class Admin_Profil extends CI_Controller
             if ($this->Profil_Model->get_data_count() == 0) {
                 $profil['id_profil'] = uniqid();
                 $this->Profil_Model->add_data($profil);
-                redirect(base_url() . 'admin/profil');
+                redirect($_SERVER['HTTP_REFERER']);
             } else {
                 $id = $this->Profil_Model->get_data_row();
                 $this->Profil_Model->update_data($id['id_profil'], $profil);
-                redirect(base_url() . 'admin/profil');
+                redirect($_SERVER['HTTP_REFERER']);
             }
         }
         $data['judul']  = "Profil";

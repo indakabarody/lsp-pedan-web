@@ -107,7 +107,7 @@ class Admin_Skema_Sertifikasi extends CI_Controller
                 $this->_deleteImage($row['thumb'], "skema_sertifikasi");
             }
             $this->Skema_Sertifikasi_Model->delete_data("id_skema_sertifikasi", $id);
-            redirect(base_url() . "admin/skema-sertifikasi");
+            redirect($_SERVER['HTTP_REFERER']);
         } else {
             redirect(base_url() . "admin");
         }

@@ -23,11 +23,11 @@ class Admin_Visi_Misi extends CI_Controller
             if ($this->Visi_Misi_Model->get_data_count() == 0) {
                 $visi_misi['id_visi_misi'] = uniqid();
                 $this->Visi_Misi_Model->add_data($visi_misi);
-                redirect(base_url() . 'admin/visi-misi');
+                redirect($_SERVER['HTTP_REFERER']);
             } else {
                 $id = $this->Visi_Misi_Model->get_data_row();
                 $this->Visi_Misi_Model->update_data($id['id_visi_misi'], $visi_misi);
-                redirect(base_url() . 'admin/visi-misi');
+                redirect($_SERVER['HTTP_REFERER']);
             }
         }
         $data['judul']  = "Visi Misi";

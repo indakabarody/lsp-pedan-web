@@ -69,7 +69,7 @@
 						</li>
 						<li class="nav-item has-treeview">
 							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-copy"></i>
+								<i class="nav-icon fas fa-cogs"></i>
 								<p>
 									Pengaturan
 									<i class="fas fa-angle-left right"></i>
@@ -86,7 +86,7 @@
 						</li>
 						<li class="nav-item has-treeview">
 							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-copy"></i>
+								<i class="nav-icon fas fa-info"></i>
 								<p>
 									Tentang
 									<i class="fas fa-angle-left right"></i>
@@ -115,7 +115,7 @@
 						</li>
 						<li class="nav-item has-treeview">
 							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-copy"></i>
+								<i class="nav-icon fas fa-certificate"></i>
 								<p>
 									Sertifikasi
 									<i class="fas fa-angle-left right"></i>
@@ -149,7 +149,7 @@
 								<li class="nav-item">
 									<a href="<?= base_url()."admin/smk-jejaring-kerja"; ?>" class="nav-link">
 										<i class="far fa-circle nav-icon"></i>
-										<p>Jejaring Kerja</p>
+										<p>SMK Jejaring Kerja</p>
 									</a>
 								</li>
 							</ul>

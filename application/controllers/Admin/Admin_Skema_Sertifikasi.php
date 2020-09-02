@@ -81,7 +81,8 @@ class Admin_Skema_Sertifikasi extends CI_Controller
                     }
                     $this->_deleteImage($this->input->post('gambar_lama'), "skema_sertifikasi");
                     $this->_deleteImage("thumb_" . $this->input->post('gambar_lama'), "skema_sertifikasi");
-                }
+				}
+				
                 $this->Skema_Sertifikasi_Model->update_data('id_skema_sertifikasi', $id, $data);
                 redirect(base_url() . "admin/skema-sertifikasi");
             }

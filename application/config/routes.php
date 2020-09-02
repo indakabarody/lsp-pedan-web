@@ -52,6 +52,13 @@ $route['admin/asesor-kompetensi/edit/(:any)'] = 'admin/Admin_Asesor_Kompetensi/e
 $route['admin/asesor-kompetensi/hapus'] = 'admin/Admin_Asesor_Kompetensi/hapus';
 $route['admin/asesor-kompetensi/hapus/(:any)'] = 'admin/Admin_Asesor_Kompetensi/hapus/$1';
 
+$route['admin/tempat-uji-kompetensi'] = 'admin/Admin_Tempat_Uji_Kompetensi';
+$route['admin/tempat-uji-kompetensi/tambah'] = 'admin/Admin_Tempat_Uji_Kompetensi/tambah';
+$route['admin/tempat-uji-kompetensi/edit'] = 'admin/Admin_Tempat_Uji_Kompetensi/edit';
+$route['admin/tempat-uji-kompetensi/edit/(:any)'] = 'admin/Admin_Tempat_Uji_Kompetensi/edit/$1';
+$route['admin/tempat-uji-kompetensi/hapus'] = 'admin/Admin_Tempat_Uji_Kompetensi/hapus';
+$route['admin/tempat-uji-kompetensi/hapus/(:any)'] = 'admin/Admin_Tempat_Uji_Kompetensi/hapus/$1';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -22,16 +22,12 @@
 				<?php foreach ($data as $row) : ?>
 				<form class="form-horizontal style-form" method="POST" action="" name="form1" id="form1" enctype="multipart/form-data">
 					<div class="form-group">
-						<div class="form-label-group">
-							<label for="nama">Nama Skema</label>
-							<input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan Nama Skema" required="required" autocomplete="off" autofocus="" value="<?= $row['nama']; ?>">
-						</div>
 						<div class="form-group">
 							<label for="exampleInputFile">Gambar Lama</label>
 							<div class="input-group">
 								<div class="custom-file">
 									<input type="hidden" name="gambar_lama" id="gambar_lama" value="<?= $row['gambar']; ?>">
-									<img src="<?= $asset2."upload/skema_sertifikasi/".$row['thumb']; ?>" alt="" width="100"><br>
+									<img src="<?= $asset2."upload/tempat_uji_kompetensi/".$row['gambar']; ?>" alt="" width="100"><br>
 								</div>
 							</div>
 						</div>
@@ -44,18 +40,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label>Kompetensi</label>
-							<select name="id_kompetensi" id="id_kompetensi" class="form-control">
-								<?php foreach ($kompetensi as $row2) : ?>
-									<option value="<?= $row2['id_kompetensi']; ?>" <?php if ($row['id_kompetensi'] ==  $row2['id_kompetensi']) echo 'selected'; ?>><?= $row2['kompetensi']; ?> (<?= $row2['kompetensi_short']; ?>)</option>
-								<?php endforeach ?>
-							</select>
-						</div>
 						<div class="form-label-group">
-							<label for="tugas">Deskripsi</label>
-							<script src="<?= $asset2; ?>ckeditor/ckeditor.js"></script>
-							<textarea class="form-control ckeditor" name="deskripsi"><?= $row['deskripsi']; ?></textarea>
+							<label for="caption">Caption</label>
+							<input type="text" id="caption" name="caption" value="<?= $row['caption']; ?>" class="form-control" placeholder="Masukkan Caption" required="required" autocomplete="off" autofocus="">
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit"></input>

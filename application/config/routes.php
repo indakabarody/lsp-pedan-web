@@ -45,6 +45,13 @@ $route['admin/unit-kompetensi/(:any)/edit/(:any)'] = 'admin/Admin_Unit_Kompetens
 $route['admin/unit-kompetensi/(:any)/hapus'] = 'admin/Admin_Unit_Kompetensi/hapus';
 $route['admin/unit-kompetensi/hapus/(:any)'] = 'admin/Admin_Unit_Kompetensi/hapus/$1';
 
+$route['admin/asesor-kompetensi'] = 'admin/Admin_Asesor_Kompetensi';
+$route['admin/asesor-kompetensi/tambah'] = 'admin/Admin_Asesor_Kompetensi/tambah';
+$route['admin/asesor-kompetensi/edit'] = 'admin/Admin_Asesor_Kompetensi/edit';
+$route['admin/asesor-kompetensi/edit/(:any)'] = 'admin/Admin_Asesor_Kompetensi/edit/$1';
+$route['admin/asesor-kompetensi/hapus'] = 'admin/Admin_Asesor_Kompetensi/hapus';
+$route['admin/asesor-kompetensi/hapus/(:any)'] = 'admin/Admin_Asesor_Kompetensi/hapus/$1';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

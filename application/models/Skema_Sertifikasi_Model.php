@@ -28,7 +28,7 @@ class Skema_Sertifikasi_Model extends CI_Model
 		$this->db->select('skema_sertifikasi.*, kompetensi.kompetensi, kompetensi.kompetensi_short')
 					->from('skema_sertifikasi')
 					->join('kompetensi', 'kompetensi.id_kompetensi = skema_sertifikasi.id_kompetensi')
-					->order_by('skema_sertifikasi.nama', 'asc');
+					->order_by('skema_sertifikasi.nama_skema', 'asc');
         return $this->db->get()->result_array();
 	}
 

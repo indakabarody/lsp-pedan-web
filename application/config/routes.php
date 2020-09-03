@@ -59,6 +59,13 @@ $route['admin/tempat-uji-kompetensi/edit/(:any)'] = 'admin/Admin_Tempat_Uji_Komp
 $route['admin/tempat-uji-kompetensi/hapus'] = 'admin/Admin_Tempat_Uji_Kompetensi/hapus';
 $route['admin/tempat-uji-kompetensi/hapus/(:any)'] = 'admin/Admin_Tempat_Uji_Kompetensi/hapus/$1';
 
+$route['admin/pemegang-sertifikat'] = 'admin/Admin_Pemegang_Sertifikat';
+$route['admin/pemegang-sertifikat/tambah'] = 'admin/Admin_Pemegang_Sertifikat/tambah';
+$route['admin/pemegang-sertifikat/edit'] = 'admin/Admin_Pemegang_Sertifikat/edit';
+$route['admin/pemegang-sertifikat/edit/(:any)'] = 'admin/Admin_Pemegang_Sertifikat/edit/$1';
+$route['admin/pemegang-sertifikat/hapus'] = 'admin/Admin_Pemegang_Sertifikat/hapus';
+$route['admin/pemegang-sertifikat/hapus/(:any)'] = 'admin/Admin_Pemegang_Sertifikat/hapus/$1';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

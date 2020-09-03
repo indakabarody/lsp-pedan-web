@@ -27,15 +27,15 @@ class Admin_Skema_Sertifikasi extends CI_Controller
     public function tambah()
     {
         $this->form_validation->set_rules('id_kompetensi', 'Kompetensi', 'required');
-        $this->form_validation->set_rules('nama', 'Nama', 'callback_checkSpace|trim|callback_checkNama');
+        $this->form_validation->set_rules('nama_skema', 'Nama Skema', 'callback_checkSpace|trim|callback_checkNama');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
         
         if ($this->form_validation->run() === true) {
             $data = array(
                 'id_skema_sertifikasi' => uniqid(),
                 'id_kompetensi' => $this->input->post('id_kompetensi'),
-                'nama' => ucwords(reduce_multiples($this->input->post('nama'), " ")),
-                'slug' => $this->_slug($this->input->post('nama')),
+                'nama_skema' => ucwords(reduce_multiples($this->input->post('nama_skema'), " ")),
+                'slug' => $this->_slug($this->input->post('nama_skema')),
                 'gambar' => $this->_upload("gambar", 'skema_sertifikasi'),
                 'deskripsi' => $this->input->post('deskripsi')
             );
@@ -61,14 +61,14 @@ class Admin_Skema_Sertifikasi extends CI_Controller
     public function edit($id = NULL)
     {
         if ((!$id == NUll) && ($this->Skema_Sertifikasi_Model->get_data_where("id_skema_sertifikasi", $id))) {
-            $this->form_validation->set_rules('nama', 'Nama', 'callback_checkSpace|trim|callback_checkNama[' . $id . ']');
+            $this->form_validation->set_rules('nama_skema', 'Nama Skema', 'callback_checkSpace|trim|callback_checkNama[' . $id . ']');
             $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
             
             if ($this->form_validation->run() === true) {
                 $data = array(
                     'id_kompetensi' => $this->input->post('id_kompetensi'),
-                    'nama' => ucwords(reduce_multiples($this->input->post('nama'), " ")),
-                    'slug' => $this->_slug($this->input->post('nama')),
+                    'nama_skema' => ucwords(reduce_multiples($this->input->post('nama_skema'), " ")),
+                    'slug' => $this->_slug($this->input->post('nama_skema')),
                     'deskripsi' => $this->input->post('deskripsi')
                 );
                 
@@ -114,12 +114,12 @@ class Admin_Skema_Sertifikasi extends CI_Controller
         }
     }
     
-    public function checkNama($nama = NULL, $id = NULL)
+    public function checkNama($nama_skema = NULL, $id = NULL)
     {
-        if ($nama == NULL) {
+        if ($nama_skema == NULL) {
             redirect(base_url() . "admin");
         }
-        if ($data = $this->Skema_Sertifikasi_Model->get_data_where('slug', $this->_slug($nama))) {
+        if ($data = $this->Skema_Sertifikasi_Model->get_data_where('slug', $this->_slug($nama_skema))) {
             foreach ($data as $row) {
                 if ($row['id_skema_sertifikasi'] == $id) {
                     return true;

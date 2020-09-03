@@ -23,8 +23,8 @@
 				<form class="form-horizontal style-form" method="POST" action="" name="form1" id="form1" enctype="multipart/form-data">
 					<div class="form-group">
 						<div class="form-label-group">
-							<label for="nama">Nama Skema</label>
-							<input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan Nama Skema" required="required" autocomplete="off" autofocus="" value="<?= $row['nama']; ?>">
+							<label for="nama_skema">Nama Skema</label>
+							<input type="text" id="nama_skema" name="nama_skema" class="form-control" placeholder="Masukkan Nama Skema" required="required" autocomplete="off" autofocus="" value="<?= $row['nama_skema']; ?>">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputFile">Gambar Lama</label>

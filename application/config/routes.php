@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['admin'] = 'admin/Admin_Dashboard';
 
-$route['login'] = 'admin/Auth/login';
-$route['logout'] = 'admin/Auth/logout';
+$route['login'] = 'auth/Auth/login';
+$route['logout'] = 'auth/Auth/logout';
 
 $route['admin/dashboard'] = 'admin/Admin_Dashboard';
 

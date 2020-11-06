@@ -8,7 +8,7 @@ class Admin_Dashboard extends CI_Controller
         parent::__construct();
         $this->load->model('Login_Model');
         
-        if (!$this->Login_Model->isLogin()) {
+        if (!$this->Login_Model->isLogin() || $this->session->role != 'admin') {
             return redirect(base_url() . "login");
         }
     }

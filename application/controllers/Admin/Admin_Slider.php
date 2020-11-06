@@ -8,8 +8,8 @@ class Admin_Slider extends CI_Controller
         parent::__construct();
         $this->load->model('Slider_Model');
         $this->load->model('Login_Model');
-        if (!$this->Login_Model->isLogin()) {
-            return redirect(base_url() . "admin/login");
+        if (!$this->Login_Model->isLogin() || $this->session->role != 'admin') {
+            return redirect(base_url() . "login");
         }
 	}
 	

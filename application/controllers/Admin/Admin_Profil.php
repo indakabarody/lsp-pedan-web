@@ -9,7 +9,7 @@ class Admin_Profil extends CI_Controller
         $this->load->model('Profil_Model');
         $this->load->model('Login_Model');
         
-        if (!$this->Login_Model->isLogin()) {
+        if (!$this->Login_Model->isLogin() || $this->session->role != 'admin') {
             return redirect(base_url() . "login");
         }
     }

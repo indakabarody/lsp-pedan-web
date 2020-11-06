@@ -10,7 +10,7 @@ class Admin_Asesor_Kompetensi extends CI_Controller
         $this->load->model('Kompetensi_Model');
         $this->load->model('Login_Model');
         
-        if (!$this->Login_Model->isLogin()) {
+        if (!$this->Login_Model->isLogin() || $this->session->role != 'admin') {
             return redirect(base_url() . "login");
         }
     }

@@ -28,6 +28,13 @@
 					<p class="login-box-msg">Login untuk melanjutkan</p>
 					<form action="" method="post">
 						<div class="input-group mb-3">
+							<select name="role" id="role" class="form-control">
+								<option value="admin">Masuk sebagai Admin</option>
+								<option value="asesor">Masuk sebagai Asesor</option>
+								<option value="peserta" selected>Masuk sebagai Peserta</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
 							<input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
 							<div class="input-group-append">
 								<div class="input-group-text">

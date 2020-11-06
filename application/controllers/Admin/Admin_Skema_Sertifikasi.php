@@ -9,8 +9,8 @@ class Admin_Skema_Sertifikasi extends CI_Controller
 		$this->load->model('Skema_Sertifikasi_Model');
 		$this->load->model('Kompetensi_Model');
         $this->load->model('Login_Model');
-        if (!$this->Login_Model->isLogin()) {
-            return redirect(base_url() . "admin/login");
+        if (!$this->Login_Model->isLogin() || $this->session->role != 'admin') {
+            return redirect(base_url() . "login");
         }
     }
     

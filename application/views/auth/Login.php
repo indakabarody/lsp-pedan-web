@@ -6,6 +6,8 @@
 		<title>Log In - LSP SMKN 1 Pedan</title>
 		<!-- Tell the browser to be responsive to screen width -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- site icons -->
+		<link rel="icon" href="<?php echo base_url(); ?>asset/images/lsp-circle.png" type="image/png" />
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="<?= $asset2; ?>plugins/fontawesome-free/css/all.min.css">
 		<!-- Ionicons -->

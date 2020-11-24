@@ -5,7 +5,8 @@
 		<title><?= $judul; ?> - LSP SMKN 1 Pedan (Admin)</title>
 		<!-- Tell the browser to be responsive to screen width -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <link rel="shortcut icon" href="<?= $asset2; ?>dist/img/PanicButtonLogo.png"> -->
+		<!-- site icons -->
+		<link rel="icon" href="<?php echo base_url(); ?>asset/images/lsp-circle.png" type="image/png" />
 		<!-- DataTables -->
 		<link rel="stylesheet" href="<?= $asset2; ?>plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 		<!-- Font Awesome -->

@@ -66,6 +66,12 @@ $route['admin/pemegang-sertifikat/edit/(:any)'] = 'admin/Admin_Pemegang_Sertifik
 $route['admin/pemegang-sertifikat/hapus'] = 'admin/Admin_Pemegang_Sertifikat/hapus';
 $route['admin/pemegang-sertifikat/hapus/(:any)'] = 'admin/Admin_Pemegang_Sertifikat/hapus/$1';
 
-$route['default_controller'] = 'welcome';
+$route['home'] = 'Home';
+$route['daftar'] = 'Daftar';
+$route['sejarah'] = 'Sejarah';
+$route['visi'] = 'Visi';
+$route['lsp'] = 'Lsp';
+
+$route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>LSP | SMKN 1 Pedan</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- site icons -->
-      <link rel="icon" href="<?php echo base_url(); ?>asset/images/lsp-circle.png" type="image/png" />
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/bootstrap.min.css" />
-      <!-- site css -->
-      <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/style.css" />
-      <!-- responsive css -->
-      <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/responsive.css" />
-      <!-- colors css -->
-      <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/colors.css" />
-      <!-- wow animation css -->
-      <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/animate.css" />
-      <!--[if lt IE 9]>
-      <script src="<?php echo base_url(); ?>asset/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="<?php echo base_url(); ?>asset/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <body id="default_theme" class="home_page1">
-      <!-- header -->
-      <header class="header header_style1">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-9 col-lg-10">
-                  <div class="logo"><a href="<?php echo base_url(); ?>asset/index.html"><img src="<?php echo base_url(); ?>asset/images/lsp-logokecil.png" alt="#" /></a></div>
-                  <div class="main_menu float-right">
-                     <div class="menu">
-                        <ul class="clearfix">
-                           <li class="active"><a href="<?php echo base_url('home'); ?>">Beranda</a></li>
-                            <li><a href="#">Tentang Kami</a>
-                              <ul>
-                                    <li><a href="<?php echo base_url('sejarah');?>">Sejarah SMK</a></li>
-                                    <li><a href="<?php echo base_url('visi');?>">Visi dan Misi</a></li>
-                                 </ul>
+<head>
+  <meta charset="utf-8">
+  <title>LSP - SMKN 1 Pedan</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
+  <!-- Favicons -->
+  <link href="<?php echo base_url(); ?>asset/img/lsp-circle.png" rel="icon">
+  <link href="<?php echo base_url(); ?>asset/img/lsp-logokecil.png" rel="apple-touch-icon">
 
-                           </li>
-                           <li><a href="<?php echo base_url('lsp'); ?>">Sertifikasi</a></li>
-                          
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3 col-lg-2">
-                  <div class="right_bt"><a class="bt_main" href="<?php echo base_url(); ?>login">Login</a> </div>
-               </div>
-            </div>
-         </div>
-      </header>
-     
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Lato:400,900" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="<?php echo base_url(); ?>asset/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="<?php echo base_url(); ?>asset/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>asset/lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>asset/lib/hover/hoverex-all.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="<?php echo base_url(); ?>asset/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Template Name: Solid
+    Template URL: https://templatemag.com/solid-bootstrap-business-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="<?php echo base_url('welcome'); ?>">LSP SMKN 1 Pedan</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="<?php echo base_url('welcome'); ?>">HOME</a></li>
+
+          <li class="dropdown">
+            <a href="<?php echo base_url(); ?>" class="dropdown-toggle" data-toggle="dropdown">Tentang Kami  <b class="caret"></b></a>
+               <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('sejarah');?>">Sejarah SMK</a></li>
+                    <li><a href="<?php echo base_url('visi');?>">Visi dan Misi</a></li>
+                </ul>
+          </li>
+
+         
+          <li class="dropdown">
+            <a href="<?php echo base_url(); ?>" class="dropdown-toggle" data-toggle="dropdown">Sertifikasi  <b class="caret"></b></a>
+               <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('skema');?>">Skema Sertifikasi</a></li>
+                    <li><a href="<?php echo base_url('lsp');?>">Pelaksanaan Sertifikasi</a></li>
+                </ul>
+          </li>
+         
+           <li><a href="<?php echo base_url('kompetensi'); ?>">Kompetensi Keahlian</a></li>
+					<li><a href="<?php echo base_url('daftar'); ?>">Pendaftaran</a></li>
+					<li><a href="<?php echo base_url('login'); ?>">Login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>

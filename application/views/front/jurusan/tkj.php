@@ -20,7 +20,7 @@
   <div class="container mtb">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive" src="<?php echo base_url(); ?>Solid/img/tkj.jpg" alt="">
+        <img class="img-responsive" src="<?php echo base_url(); ?>asset/img/tkj.jpg" alt="">
       </div>
 
       <div class="col-lg-6">

@@ -19,7 +19,7 @@
 
       <div class="col-lg-8">
         <p><img class="img-responsive" src="<?php echo base_url(); ?>asset/img/tkj.jpg"  ></p>
-        <a href="single-post.html"><h3 class="ctitle">Teknik Komputer dan Jaringan.</h3></a>
+        <a href="#"><h3 class="ctitle">Teknik Komputer dan Jaringan.</h3></a>
         <p>
         
         </p>
@@ -32,7 +32,7 @@
         <div class="spacing"></div>
 
         <p><img class="img-responsive" src="<?php echo base_url(); ?>asset/img/akl.jpg"></p>
-        <a href="single-post.html"><h3 class="ctitle">Akuntansi Keuangan dan Lembaga.</h3></a>
+        <a href="#"><h3 class="ctitle">Akuntansi Keuangan dan Lembaga.</h3></a>
         <p>
           
         </p>
@@ -45,7 +45,7 @@
         <div class="spacing"></div>
 
         <p><img class="img-responsive" src="<?php echo base_url(); ?>asset/img/rpl.jpg"></p>
-        <a href="single-post.html"><h3 class="ctitle">Rekayasa Perangkat Lunak.</h3></a>
+        <a href="#"><h3 class="ctitle">Rekayasa Perangkat Lunak.</h3></a>
         <p>
       
         </p>
@@ -58,7 +58,7 @@
          <div class="spacing"></div>
 
         <p><img class="img-responsive" src="<?php echo base_url(); ?>asset/img/bdp.jpg"></p>
-        <a href="single-post.html"><h3 class="ctitle">Bisnis Daring dan Pemasaran.</h3></a>
+        <a href="#"><h3 class="ctitle">Bisnis Daring dan Pemasaran.</h3></a>
         <p>
         
         </p>
@@ -79,7 +79,7 @@
          <div class="spacing"></div>
 
         <p><img class="img-responsive" src="<?php echo base_url(); ?>asset/img/otp.jpg"></p>
-        <a href="single-post.html"><h3 class="ctitle">Otomatisasi dan Tata Kelola Perkantoran.</h3></a>
+        <a href="#"><h3 class="ctitle">Otomatisasi dan Tata Kelola Perkantoran.</h3></a>
         <p>
       
         </p>

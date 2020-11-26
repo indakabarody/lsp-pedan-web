@@ -45,11 +45,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="<?php echo base_url('welcome'); ?>">LSP SMKN 1 Pedan</a>
+        <a class="navbar-brand" href="<?php echo base_url(''); ?>">LSP SMKN 1 Pedan</a>
       </div>
       <div class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="<?php echo base_url('welcome'); ?>">HOME</a></li>
+          <li class="active"><a href="<?php echo base_url(''); ?>">HOME</a></li>
 
           <li class="dropdown">
             <a href="<?php echo base_url(); ?>" class="dropdown-toggle" data-toggle="dropdown">Tentang Kami  <b class="caret"></b></a>
